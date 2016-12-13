@@ -9,6 +9,7 @@ services:
       - kcp_in_addr=localhost:7676
       - kcp_crypt=none
       - kcp_mode=fast2
+      - kcp_key=key
     
     ports:
       - "6591:8080"
