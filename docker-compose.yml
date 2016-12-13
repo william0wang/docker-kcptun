@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  kcptun_server:
+    restart: always
+    image: wan0eve/drone-android:latest
+    environment:
+      - kcp_out_port=8080
+      - kcp_in_addr=localhost:7676
+      - kcp_crypt=none
+      - kcp_mode=fast2
+    
+    ports:
+      - "6591:8080"
